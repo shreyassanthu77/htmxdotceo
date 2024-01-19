@@ -256,9 +256,14 @@ const ceos = [
 ];
 
 let html = "";
+const size = 400;
 for (const ceo of ceos) {
-  const imgUrl = `/img/ceos/${ceo}.jpg`;
-  html += `<img src="${imgUrl}" alt="${ceo} loading="lazy" />`;
+  const imgUrl = `/img/${ceo}.jpg`;
+  html +=
+    `<a title="${ceo}" href="https://twitter.com/${ceo}" class="img"><img width="${size}" height="${size}" src="${imgUrl}" alt="${ceo}"\n loading="lazy" /></a>\n`;
 }
+const template = await Bun.file("templ/index.html").text();
+html = template.replace("{{ceos}}", html);
+await Bun.write("index.html", html);
 
-console.log(html);
+export {};
