@@ -19,6 +19,32 @@ body {
     sans-serif;
 }
 
+.marquee {
+  font-size: 1.5rem;
+  font-weight: bold;
+  max-width: max-content;
+  margin: 2rem 0;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
 .search {
   display: block;
   margin: 0 auto;

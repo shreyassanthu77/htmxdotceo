@@ -20,6 +20,7 @@ for await (const templ of templates.scan()) {
   for (const key of varKeys) {
     file = file.replace(`{{${key}}}`, await templVars[key]());
   }
+
   const dest = templ.replace("templ/", "public/");
   await Bun.write(dest, file);
 }
