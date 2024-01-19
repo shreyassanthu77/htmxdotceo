@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "bunx vite"
+    "dev": "bunx vite public/"
   },
   "devDependencies": {
     "@types/bun": "^1.0.2",
