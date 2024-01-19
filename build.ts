@@ -5,7 +5,7 @@ const templVars = {
     const size = 400;
     let html = "";
     for (const ceo of ceos) {
-      const imgUrl = `/img/${ceo}.jpg`;
+      const imgUrl = `img/${ceo}.jpg`;
       html +=
         `<a title="${ceo}" href="https://twitter.com/${ceo}" class="img"><img width="${size}" height="${size}" src="${imgUrl}" alt="${ceo}"\n loading="lazy" /></a>\n`;
     }
