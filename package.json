@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "bunx vite"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.0.2",
+    "@types/node": "^20.11.5"
+  },
+  "type": "module"
+}
